@@ -1,0 +1,21 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: dubbo-say-hello2
+  main:
+    allow-bean-definition-overriding: true
+
+dubbo:
+  application:
+    name: say-hello-provider2
+    qos-port: 55555
+  registry:
+    address: nacos://192.168.26.1:8848
+    username: nacos
+    password: nacos
+  protocol:
+    name: dubbo
+    port: 10001
+  scan:
+    base-packages: com.hwt.service

@@ -1,0 +1,20 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: dubbo-say-consumer
+
+dubbo:
+  registry:
+    password: nacos
+    username: nacos
+    address: nacos://192.168.26.1:8848
+  protocol:
+    name: dubbo
+    port: 10000
+  application:
+    name: say-consumer
+    qos-port: 44444
+  scan:
+    base-packages: com.hwt.controller
+
